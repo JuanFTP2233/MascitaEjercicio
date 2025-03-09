@@ -1,10 +1,7 @@
 fun main() {
-    // Lista para almacenar las mascotas registradas
     val listaMascotas = mutableListOf<Mascota>()
-    // Lista para almacenar las consultas médicas realizadas
     val listaConsultas = mutableListOf<ConsultaMedica>()
 
-    // Función para registrar una nueva mascota
     fun registrarMascota() {
         println("Registro de nueva mascota:")
         print("Nombre: ")
@@ -21,7 +18,7 @@ fun main() {
         println("Mascota registrada con éxito: ${mascota.describir()}\n")
     }
 
-    // Función para registrar una consulta médica para una mascota específica
+
     fun registrarConsultaMedica() {
         if (listaMascotas.isEmpty()) {
             println("No hay mascotas registradas. Registre una mascota primero.\n")
@@ -58,7 +55,7 @@ fun main() {
         println("Costo total: $${consulta.calcularCosto(incluyeMedicacion)}\n")
     }
 
-    // Función para mostrar el historial de consultas de una mascota
+
     fun mostrarHistorialConsultas() {
         if (listaMascotas.isEmpty()) {
             println("No hay mascotas registradas.\n")
@@ -92,7 +89,7 @@ fun main() {
         println()
     }
 
-    // Función para modificar los datos de una mascota
+
     fun modificarMascota() {
         if (listaMascotas.isEmpty()) {
             println("No hay mascotas registradas.\n")
@@ -124,7 +121,7 @@ fun main() {
         println("Datos actualizados: ${mascota.describir()}\n")
     }
 
-    // Función para calcular el costo total de todas las consultas de una mascota
+
     fun calcularCostoTotalConsultas() {
         if (listaMascotas.isEmpty()) {
             println("No hay mascotas registradas.\n")
@@ -154,8 +151,6 @@ fun main() {
         val costoTotal = consultasMascota.sumOf { it.costo }
         println("Costo total de consultas para ${mascota.nombre}: $$costoTotal\n")
     }
-
-    // Menú principal
     while (true) {
         println("Sistema de Gestión Veterinaria")
         println("1. Registrar nueva mascota")
